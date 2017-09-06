@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+X-LOTUS-CHARSET:UTF-8
+VERSION:2.0
+PRODID:ZMS-Berlin
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fraunhofer_im1504595157
+CLASS:PUBLIC
+DTSTART;TZID=Europe/Berlin:20170905T131500
+DTEND;TZID=Europe/Berlin:20170905T141500
+DTSTAMP:20170905T070557Z
+LOCATION:Bürgeramt Blaschkoallee, Neukölln, Blaschkoallee 32, 12359 Berlin
+SUMMARY:Berlin-Termin: 34956
+DESCRIPTION:Sehr geehrte/r Frau oder Herr Jesus Eloy Sanchez Fernandez,\n\nhiermit bestätigen wir Ihnen Ihren gebuchten Termin am 05. September 2017 um 13:15 Uhr.\nOrt: Bürgeramt Blaschkoallee, Neukölln , Blaschkoallee 32, 12359 Berlin\n(Aufruf im Warteraum/Zimmer 231)\n\nIhre Vorgangsnummer ist die 34956.\n\nIhr Code zur Terminabsage oder -änderung lautet 93d2.\n\n\nZahlungshinweis: Am Standort kann bar und mit girocard (mit PIN) (ehemals EC-Karte) bezahlt werden.\n\nSie haben folgende Dienstleistung(en) ausgewählt:\n\nAnmeldung einer Wohnung, wofür Sie folgende Unterlagen benötigen:\n- Persönliches Erscheinen (Vertretung möglich)\n   Die Anmeldung können Sie nur vor Ort abgeben. Sie können sich auch\n   durch eine andere Person vertreten lassen, wenn Sie dieser Person eine\n   Vollmacht und das ausgefüllte Anmelde-Formular mitgeben. Dieses\n   Formular müssen Sie selbst unterschreiben. Das Anmelde-Formular finden\n   Sie im Abschnitt Formulare.\n\n- Identitätsnachweis\n   Personalausweis, Reisepass, Kinderreisepass für deutsche\n   Staatsangehörige oder Nationalpass oder Passersatzpapiere für\n   ausländische Staatsangehörige.\nBitte bringen Sie alle genannten und\n   Ihnen vorliegenden Dokumente für alle umziehenden Personen mit.\n\n- Beiblatt zur Anmeldung (bei mehreren Wohnungen)\n   Nur wenn Sie Ihre bisherige Wohnung in Deutschland nicht aufgeben und\n   die neue Wohnung zusätzlich anmelden wollen, muss für Sie und Ihre\n   ggf. mitziehenden Familienmitglieder eine Wohnung als Hauptwohnung\n   bestimmt werden.\n\n- Anmeldeformular\n   Personen einer Familie, die aus der bisherigen Wohnung zusammen in die\n   neue Wohnung ziehen, können gemeinsam ein Anmeldeformular\n   benutzen.\nBei mehr als 2 anzumeldenden Personen bitte weiteren\n   Meldeschein benutzen.\nBitte beachten Sie im Bereich\n   &quot;Weiterführende Informationen&quot; die &quot;Weiterführenden\n   Hinweise zu Anmeldungen&quot; .\n\n- Personenstandsurkunde\n   Nur für Ihre erste Anmeldung in Berlin ist es zweckdienlich, wenn Sie\n   eine Personenstandsurkunde zur Anmeldung mitbringen und vorlegen (z.B.\n   Heiratsurkunde, Geburtsurkunde).\n\n- Einzugsbestätigung des Wohnungsgebers (Vermieter)\n   Seit dem 1. November 2015 ist der Wohnungsgeber verpflichtet, dem\n   Meldepflichtigen den Einzug innerhalb von zwei Wochen nach dem Einzug\n   schriftlich mit Unterschrift zu bestätigen. Die Bestätigung muss\n   folgende Daten enthalten: Name und Anschrift des Wohnungsgebers und\n   wenn dieser nicht Eigentümer ist, auch den Namen des Eigentümers,\n   Einzugsdatum, Anschrift der Wohnung und Namen der meldepflichtigen\n   Personen. Die Vorlage eines Mietvertrages ersetzt nicht die\n   Einzugsbestätigung.\nEin Muster für die Einzugsbestätigung des\n   Wohnungsgebers steht Ihnen unter &quot;Formulare&quot; zur Verfügung.\n\n- ggf. die Einverständniserklärung des abwesenden Sorgeberechtigten und dessen Pass oder Personalausweis\n   Ein Muster für die Einverständniserklärung der Sorgeberechtigten steht\n   Ihnen unter &quot;Formulare&quot; zur Verfügung.\n\n\nKosten: gebührenfrei; das gilt auch für die Meldebestätigung.\n\n\n----\n\nSollten Sie den Termin nicht wahrnehmen können, sagen Sie ihn bitte ab.\nDies können Sie über unsere Internetbuchungsseite http://service.berlin.de/terminvereinbarung/termin/terminaendern.php unter Angabe Ihrer Vorgangsnummer "34956" und Ihres Namens "Jesus Eloy Sanchez Fernandez" oder des Codes "93d2" erledigen.\n
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Erinnerung
+END:VALARM
+END:VEVENT
+END:VCALENDAR
