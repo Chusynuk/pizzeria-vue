@@ -6,7 +6,7 @@
 
 <template lang="html">
 
-<v-card >
+<v-card v-bind:bases="bases">
     <h2 class="headline mb-0">Extra ingredients:</h2>
     <v-layout row v-for="ingredient in ingredients" :key="ingredient.id">
         <v-layout column>
@@ -53,9 +53,10 @@
 <script>
 
 export default {
+
+    props: ["bases"],
     data: () => ({
 
-        amount: 0,
         checked1: '',
         showCart: false,
         ingredients: [{
@@ -100,6 +101,7 @@ export default {
                 if (this.ingredients[i].checked) {
                     total += this.ingredients[i].price;
                 }
+
             }
             return total;
         }

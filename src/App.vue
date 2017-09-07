@@ -13,8 +13,7 @@
                 <my-base></my-base>
             </v-flex>
             <v-flex d-flex xs12 sm6 offset-sm3 class="text-xs-center">
-
-                <my-ingredients></my-ingredients>
+                <my-ingredients ></my-ingredients>
             </v-flex>
         </v-container>
     </main>

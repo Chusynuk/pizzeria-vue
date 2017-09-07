@@ -1,28 +1,35 @@
-<style lang="css">
+<style scoped>
 
-
+img.selected {
+    border: solid 2px green;
+    /* and other styles ... */
+}
 
 </style>
 
 <template lang="html">
 
-<v-card class="text-xs-center">
+<v-card class="text-xs-center" v-bind:bases="bases">
 
     <v-toolbar class="red">
         <v-toolbar-title class="headline mb-0 text-xs-center">Grab your slice</v-toolbar-title>
     </v-toolbar>
     <v-card-media src="/static/pizza.jpg" height="200px">
     </v-card-media>
-    <h2 class="headline mb-2 text-xs-center">Choose your base:</h2>
+    <h2 class="headline mb-2">Choose your base:</h2>
     <v-layout row wrap primary-title v-for="base in bases" :key="base.id">
-        <v-flex xs6 >
-            <v-avatar size="80px" class="grey lighten-1">
-                <img v-bind:src="`${base.href}`" :class="{selected: base.selected}" @click="selectBase(base)" alt="avatar">
-            </v-avatar>
-        </v-flex>
-        <v-flex xs6 >
-            <v-subheader>{{base.price}}€</v-subheader>
-        </v-flex>
+        <v-layout column>
+            <v-flex xs6 offset-xs3>
+                <v-avatar size="80px" class="grey lighten-1">
+                    <img :src="base.href" :class="{selected: selectedBase.id == base.id}" @click="selectedBase = base" alt="avatar">
+                </v-avatar>
+            </v-flex>
+        </v-layout>
+        <v-layout column>
+            <v-flex xs6 offset-xs4>
+                <v-subheader>{{base.name}} {{base.price}}€ {{selectedBase.price}}</v-subheader>
+            </v-flex>
+        </v-layout>
     </v-layout>
 </v-card>
 
@@ -34,7 +41,7 @@ export default {
 
     data() {
             return {
-              selectedBase : -1,
+                selectedBase: {},
                 bases: [{
                     id: 1,
                     name: "Margarita",
@@ -48,9 +55,21 @@ export default {
                 }]
             }
         },
+        computed: {
+
+            totalBase: function() {
+                var totalBase = 0;
+                for (var i = 0; i < this.bases.length; i++) {
+                    if (this.bases[i].selected) {
+                        totalBase += this.bases[i].price;
+                    }
+                }
+                return totalBase;
+            }
+        },
         methods: {
-            selectBase(base) {
-                this.$set(base, 'selected', (base.selected ? false : true))
+            getSelectedBase() {
+                return this.selectedBase;
             }
         }
 }
