@@ -9,9 +9,9 @@ img.selected {
 
 <template lang="html">
 
-<v-card class="text-xs-center" v-bind:bases="bases">
+<v-card class="text-xs-center">
 
-    <v-toolbar class="red">
+    <v-toolbar class="red" dark>
         <v-toolbar-title class="headline mb-0 text-xs-center">Grab your slice</v-toolbar-title>
     </v-toolbar>
     <v-card-media src="/static/pizza.jpg" height="200px">
@@ -37,9 +37,12 @@ img.selected {
 
 <script>
 
+import { EventBus } from '../event-bus.js';
+
 export default {
 
     data() {
+
             return {
                 selectedBase: {},
                 bases: [{
@@ -55,6 +58,7 @@ export default {
                 }]
             }
         },
+
         computed: {
 
             totalBase: function() {
@@ -69,8 +73,11 @@ export default {
         },
         methods: {
             getSelectedBase() {
-                return this.selectedBase;
-            }
+                    return this.selectedBase;
+                    EventBus.$emit('i-got-price', this.selectedBase);
+                },
+
+
         }
 }
 

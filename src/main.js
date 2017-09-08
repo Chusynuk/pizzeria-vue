@@ -3,7 +3,7 @@ import App from './App.vue'
 import Vuetify from 'vuetify'
 import Button from './components/button.vue'
 import Ingredients from './components/ingredients.vue'
-import Base from './components/base.vue'
+import Base from './components/Base.vue'
 
 Vue.component('my-button', Button)
 Vue.component('my-ingredients', Ingredients)
@@ -16,5 +16,10 @@ Vue.use(Base)
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  components: {
+    Button,
+    Ingredients,
+    Base
+  }
 })

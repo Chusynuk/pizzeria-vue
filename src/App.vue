@@ -10,26 +10,24 @@
     <main>
         <v-container fluid>
             <v-flex xs12 sm6 offset-sm3>
-                <my-base></my-base>
+                <my-base ></my-base>
             </v-flex>
             <v-flex d-flex xs12 sm6 offset-sm3 class="text-xs-center">
-                <my-ingredients ></my-ingredients>
+                <my-ingredients></my-ingredients>
             </v-flex>
         </v-container>
     </main>
-    <v-footer></v-footer>
 </v-app>
 
 </template>
 
 <script>
 
-export default {
-    data: () => ({}),
 
-    methods: {
-        clickMethod() {}
-    }
+
+export default {
+
+
 }
 
 </script>
