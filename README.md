@@ -1,17 +1,17 @@
 # Pizzeria-vue
 
->  A Vue.js project challenge
+>  This is a Vue.js project challenge using Webpack, vuetify and npm/yarn.
 
-## Build Setup
+# Build Setup
 
 
-### install dependencies
+### Install dependencies
 Clone the repo and do ```npm install``` or ```yarn install``` inside the directory
 
-### serve with hot reload at localhost:8080
+### Serve with hot reload at localhost:8080
 Then run ```npm run dev``` or ```yarn run dev``` and will be servert on localhost:8080
 
-### build for production with minification
+### Build for production with minification
 ```npm run build``` or ```yarn build```
 
 
