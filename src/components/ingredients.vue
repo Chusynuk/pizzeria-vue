@@ -1,6 +1,6 @@
-<style lang="css">
+<style scoped>
 
-
+.original{margin-left: 5.5vw;}
 
 </style>
 
@@ -9,16 +9,14 @@
 <v-card>
 
     <h2 class="headline mb-0">Extra ingredients:</h2>
-    <v-layout row v-for="ingredient in ingredients" :key="ingredient.id">
-        <v-layout column class="text-xs-center">
-            <v-flex xs6 offset-xs5 class="text-xs-center">
-                <v-card-text >
-                <v-checkbox class="text-xs-center" name="checkbox" color="light-blue lighten-2" v-bind:label="`${ingredient.name}`" v-model="ingredient.checked" light></v-checkbox>
-                </v-card-text>
+    <v-layout class="original" row v-for="ingredient in ingredients" :key="ingredient.id">
+        <v-layout id="ing" column wrap>
+            <v-flex xs12>
+                <v-checkbox  name="checkbox" color="light-blue lighten-2" v-bind:label="`${ingredient.name}`" v-model="ingredient.checked" light></v-checkbox>
             </v-flex>
         </v-layout>
         <v-layout column>
-            <v-flex xs6 offset-xs5>
+            <v-flex xs6  offset-xs5>
                 <v-subheader>{{ingredient.price}} €</v-subheader>
             </v-flex>
         </v-layout>
@@ -26,25 +24,25 @@
     <v-divider></v-divider>
     <v-layout row wrap class="mb-3">
         <v-layout column>
-            <v-flex xs6 offset-xs3>
+            <v-flex xs12 >
                 <h3 class="headline mb-0">Total price:</h3>
             </v-flex>
         </v-layout>
         <v-layout column>
-            <v-flex xs6 offset-xs4>
+            <v-flex xs12 offset-xs3>
                 <v-subheader> {{sumTotal}} €</v-subheader>
             </v-flex>
         </v-layout>
     </v-layout>
     <v-divider></v-divider>
-    <v-layout row wrap class="mb-3">
+    <v-layout  row wrap class="mb-3 original">
         <v-layout column>
-            <v-flex xs6 offset-xs5>
+            <v-flex xs12>
                 <v-checkbox label="Newsletter" color="pink lighten-3" v-model="checked1" light></v-checkbox>
             </v-flex>
         </v-layout>
         <v-layout column>
-            <v-flex xs6 offset-xs4>
+            <v-flex xs12 offset-xs5>
                 <my-orderButton></my-orderButton>
             </v-flex>
         </v-layout>
@@ -58,14 +56,11 @@
 
 export default {
 
-
     props: ['myBase'],
-
 
     data: () => ({
 
         checked1: '',
-        showCart: false,
         ingredients: [{
             id: 1,
             name: "Mozzarella",
@@ -100,20 +95,17 @@ export default {
     }),
 
     computed: {
-
         total: function() {
             var total = 0;
             for (var i = 0; i < this.ingredients.length; i++) {
                 if (this.ingredients[i].checked) {
                     total += this.ingredients[i].price;
                 }
-
             }
             return total;
         },
 
         sumTotal: function() {
-
           return this.total + this.myBase;
         }
     },

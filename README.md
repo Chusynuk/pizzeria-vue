@@ -1,6 +1,6 @@
-# pizzeria-vue
+## Pizzeria-vue
 
-> A Vue.js project
+>  A Vue.js project challenge
 
 ## Build Setup
 
@@ -15,4 +15,4 @@ npm run dev or yarn run dev
 npm run build or yarn build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+If you want more detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
