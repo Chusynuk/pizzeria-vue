@@ -10,11 +10,11 @@
     <main>
         <v-container fluid>
             <v-flex xs12 sm6 offset-sm3>
-                <my-base ></my-base>
+                <my-basePizza ></my-basePizza>
             </v-flex>
-            <v-flex d-flex xs12 sm6 offset-sm3 class="text-xs-center">
+            <!-- <v-flex d-flex xs12 sm6 offset-sm3 class="text-xs-center">
                 <my-ingredients></my-ingredients>
-            </v-flex>
+            </v-flex> -->
         </v-container>
     </main>
 </v-app>
@@ -25,8 +25,8 @@
 
 
 
-export default {
 
+export default {
 
 }
 

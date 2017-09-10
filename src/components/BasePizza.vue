@@ -16,7 +16,7 @@ img.selected {
     </v-toolbar>
     <v-card-media src="/static/pizza.jpg" height="200px">
     </v-card-media>
-    <h2 class="headline mb-2">Choose your base:</h2>
+    <h2 class="headline mb-2">Choose your base: </h2>
     <v-layout row wrap primary-title v-for="base in bases" :key="base.id">
         <v-layout column>
             <v-flex xs6 offset-xs3>
@@ -27,24 +27,28 @@ img.selected {
         </v-layout>
         <v-layout column>
             <v-flex xs6 offset-xs4>
-                <v-subheader>{{base.name}} {{base.price}}€ {{selectedBase.price}}</v-subheader>
+                <v-subheader>{{base.name}} {{base.price}}€ </v-subheader>
             </v-flex>
         </v-layout>
     </v-layout>
+    <my-ingredients :myBase="selectedBase.price"></my-ingredients>
 </v-card>
 
 </template>
 
 <script>
 
-import { EventBus } from '../event-bus.js';
+import Ingredients from './Ingredients.vue';
 
 export default {
+
 
     data() {
 
             return {
-                selectedBase: {},
+                selectedBase: {
+                    price: 0
+                },
                 bases: [{
                     id: 1,
                     name: "Margarita",
@@ -73,11 +77,9 @@ export default {
         },
         methods: {
             getSelectedBase() {
-                    return this.selectedBase;
-                    EventBus.$emit('i-got-price', this.selectedBase);
-                },
+                return this.selectedBase;
 
-
+            },
         }
 }
 
