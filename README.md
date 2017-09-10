@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+
 # install dependencies
 Clone the repo and do ```npm install``` or ```yarn install``` inside the directory
 
@@ -13,6 +13,6 @@ Then run ```npm run dev``` or ```yarn run dev``` and will be servert on localhos
 
 # build for production with minification
 npm run build or yarn build
-```
+
 
 If you want more detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
