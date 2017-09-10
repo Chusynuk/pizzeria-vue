@@ -42,7 +42,7 @@
             </v-flex>
         </v-layout>
         <v-layout column>
-            <v-flex xs12 offset-xs5>
+            <v-flex xs12 offset-xs1>
                 <my-orderButton></my-orderButton>
             </v-flex>
         </v-layout>
